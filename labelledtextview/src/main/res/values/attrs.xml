@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="LabelledTextView">
+
+        <attr name="orientation" >
+            <!-- Defines an horizontal widget. -->
+            <enum name="horizontal" value="0" />
+            <!-- Defines a vertical widget. -->
+            <enum name="vertical" value="1" />
+        </attr>
+
+        <attr name="labelText" format="string" localization="suggested" />
+        <attr name="labelGravity">
+            <flag name="bottom" value="80" />
+            <flag name="center" value="17" />
+            <flag name="center_horizontal" value="1" />
+            <flag name="center_vertical" value="16" />
+            <flag name="clip_horizontal" value="8" />
+            <flag name="clip_vertical" value="128" />
+            <flag name="end" value="8388613" />
+            <flag name="fill" value="119" />
+            <flag name="fill_horizontal" value="7" />
+            <flag name="fill_vertical" value="112" />
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+            <flag name="start" value="8388611" />
+            <flag name="top" value="48" />
+        </attr>
+        <attr name="labelWidth" format="dimension|reference" >
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+
+
+        <attr name="labelHeight" format="dimension|reference">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="labelWeight"  format="integer" />
+        <attr name="valueWeight"  format="integer" />
+
+
+        <attr name="labelTextAllCaps" format="boolean" />
+        <attr name="labelTextColor" format="color|reference" />
+        <attr name="labelTextIsSelectable" format="boolean" />
+        <attr name="labelTextSize" format="dimension|reference" />
+        <attr name="labelBackgroundColor" format="reference|color" />
+        <attr name="labelEnabled" format="boolean" />
+        <attr name="labelAlpha" format="float" />
+        <attr name="labelLines" format="integer|reference" />
+        <attr name="labelMinLines" format="integer" />
+        <attr name="labelMaxLines" format="integer" />
+        <attr name="labelMaxLength" format="integer" />
+
+        <attr name="valueText" format="string" localization="suggested" />
+        <attr name="valueGravity">
+            <flag name="bottom" value="80" />
+            <flag name="center" value="17" />
+            <flag name="center_horizontal" value="1" />
+            <flag name="center_vertical" value="16" />
+            <flag name="clip_horizontal" value="8" />
+            <flag name="clip_vertical" value="128" />
+            <flag name="end" value="8388613" />
+            <flag name="fill" value="119" />
+            <flag name="fill_horizontal" value="7" />
+            <flag name="fill_vertical" value="112" />
+            <flag name="left" value="3" />
+            <flag name="right" value="5" />
+            <flag name="start" value="8388611" />
+            <flag name="top" value="48" />
+        </attr>
+        <attr name="valueWidth" format="dimension" >
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="valueHeight" format="dimension">
+            <enum name="fill_parent" value="-1" />
+            <enum name="match_parent" value="-1" />
+            <enum name="wrap_content" value="-2" />
+        </attr>
+        <attr name="valueTextAllCaps" format="boolean" />
+        <attr name="valueTextColor" format="color|reference" />
+        <attr name="valueTextIsSelectable" format="boolean" />
+        <attr name="valueTextSize" format="dimension|reference" />
+        <attr name="valueBackgroundColor" format="reference|color" />
+        <attr name="valueEnabled" format="boolean" />
+        <attr name="valueAlpha" format="float" />
+        <attr name="valueLines" format="integer|reference" />
+        <attr name="valueMinLines" format="integer" />
+        <attr name="valueMaxLines" format="integer" />
+        <attr name="valueMaxLength" format="integer" />
+    </declare-styleable>
+
+</resources>

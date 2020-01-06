@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--
+    <style name="Display1" parent="@style/TextAppearance.AppCompat.Display1" />
+    <style name="Display2" parent="@style/TextAppearance.AppCompat.Display2" />
+    <style name="Display3" parent="@style/TextAppearance.AppCompat.Display3" />
+    <style name="Display4" parent="@style/TextAppearance.AppCompat.Display4" />
+    <style name="Body1" parent="@style/TextAppearance.AppCompat.Body1" />
+    <style name="Body2" parent="@style/TextAppearance.AppCompat.Display2" />
+    <style name="Small" parent="@style/TextAppearance.AppCompat.Small" />
+    <style name="Large" parent="@style/TextAppearance.AppCompat.Large" />
+    <style name="Medium" parent="@style/TextAppearance.AppCompat.Medium" />
+
+    <style name="LabelViewStyle">
+        <item name="labelTextAppearance">@style/Display4</item>
+    </style>
+-->
+
+</resources>

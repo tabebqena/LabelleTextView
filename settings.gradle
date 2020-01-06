@@ -1,0 +1,2 @@
+include ':app', ':labelledtextview'
+rootProject.name='LabelleTextViewExample'
