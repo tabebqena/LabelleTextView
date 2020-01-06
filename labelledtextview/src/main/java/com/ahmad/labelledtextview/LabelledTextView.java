@@ -6,7 +6,6 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -28,8 +27,8 @@ public class LabelledTextView extends LinearLayout {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         inflater.inflate(R.layout.labelled_text_view, this, true);
-        labelView = (TextView) findViewById(R.id.labelledTextViewLabel);
-        valueView = (TextView) findViewById(R.id.labelledTextViewValue);
+        labelView = findViewById(R.id.labelledTextViewLabel);
+        valueView =  findViewById(R.id.labelledTextViewValue);
 
         setOrientation(a.getInt(R.styleable.LabelledTextView_orientation, orientation));
 
@@ -42,15 +41,15 @@ public class LabelledTextView extends LinearLayout {
         }
         if (a.hasValue(R.styleable.LabelledTextView_labelWidth)) {
             setLabelWidth(a.getDimension(R.styleable.LabelledTextView_labelWidth,
-                     ViewGroup.LayoutParams.WRAP_CONTENT));
+                     LinearLayout.LayoutParams.WRAP_CONTENT));
         }else{
-            setLabelWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
+            setLabelWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
         }
         if (a.hasValue(R.styleable.LabelledTextView_labelHeight)) {
             setLabelHeight(a.getDimension(R.styleable.LabelledTextView_labelHeight,
-                    ViewGroup.LayoutParams.WRAP_CONTENT));
+                    LinearLayout.LayoutParams.WRAP_CONTENT));
         }else{
-            setLabelHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
+            setLabelHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
         }
 
         if (a.hasValue(R.styleable.LabelledTextView_labelWeight)){
@@ -104,15 +103,15 @@ public class LabelledTextView extends LinearLayout {
                 Gravity.NO_GRAVITY));
         if (a.hasValue(R.styleable.LabelledTextView_valueWidth)) {
             setValueWidth(a.getDimension(R.styleable.LabelledTextView_valueWidth,
-                    ViewGroup.LayoutParams.WRAP_CONTENT));
+                    LinearLayout.LayoutParams.WRAP_CONTENT));
         }else{
-            setValueWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
+            setValueWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
         }
         if (a.hasValue(R.styleable.LabelledTextView_valueHeight)) {
             setValueHeight(a.getDimension(R.styleable.LabelledTextView_valueHeight,
-                    ViewGroup.LayoutParams.WRAP_CONTENT));
+                    LinearLayout.LayoutParams.WRAP_CONTENT));
         }else{
-            setValueWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
+            setValueWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
         }
         if (a.hasValue(R.styleable.LabelledTextView_valueWeight)){
             setValueWeight(a.getInt(R.styleable.LabelledTextView_valueWeight, 1));
@@ -252,13 +251,13 @@ public class LabelledTextView extends LinearLayout {
     }
 
     public void setLabelHeight(float labelHeight) {
-        ViewGroup.LayoutParams params = labelView.getLayoutParams();
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) labelView.getLayoutParams();
         params.height = (int) labelHeight;
         labelView.setLayoutParams(params);
     }
 
     public void setLabelWidth(float labelWidth) {
-        ViewGroup.LayoutParams params = labelView.getLayoutParams();
+        LayoutParams params = (LinearLayout.LayoutParams) labelView.getLayoutParams();
         params.width = (int) labelWidth;
         labelView.setLayoutParams(params);
     }
@@ -275,7 +274,7 @@ public class LabelledTextView extends LinearLayout {
     }
 
     public void setValueHeight(float valueHeight) {
-        ViewGroup.LayoutParams params = valueView.getLayoutParams();
+        LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) valueView.getLayoutParams();
         params.height = (int) valueHeight;
         valueView.setLayoutParams(params);
     }

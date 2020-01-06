@@ -27,16 +27,18 @@
             <flag name="top" value="48" />
         </attr>
         <attr name="labelWidth" format="dimension|reference" >
-            <enum name="fill_parent" value="-1" />
+        <!--    <enum name="fill_parent" value="-1" />
             <enum name="match_parent" value="-1" />
             <enum name="wrap_content" value="-2" />
+        -->
         </attr>
 
 
         <attr name="labelHeight" format="dimension|reference">
-            <enum name="fill_parent" value="-1" />
+        <!--    <enum name="fill_parent" value="-1" />
             <enum name="match_parent" value="-1" />
             <enum name="wrap_content" value="-2" />
+        -->
         </attr>
         <attr name="labelWeight"  format="integer" />
         <attr name="valueWeight"  format="integer" />
@@ -72,14 +74,16 @@
             <flag name="top" value="48" />
         </attr>
         <attr name="valueWidth" format="dimension" >
-            <enum name="fill_parent" value="-1" />
+        <!--    <enum name="fill_parent" value="-1" />
             <enum name="match_parent" value="-1" />
             <enum name="wrap_content" value="-2" />
+        -->
         </attr>
         <attr name="valueHeight" format="dimension">
-            <enum name="fill_parent" value="-1" />
+        <!--    <enum name="fill_parent" value="-1" />
             <enum name="match_parent" value="-1" />
             <enum name="wrap_content" value="-2" />
+        -->
         </attr>
         <attr name="valueTextAllCaps" format="boolean" />
         <attr name="valueTextColor" format="color|reference" />
