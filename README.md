@@ -54,20 +54,16 @@ in xml
         android:id="@+id/view1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        ltv:orientation="horizontal"
-        ltv:labelGravity="center"
-        ltv:labelWidth="wrap_content"
-        ltv:labelBackgroundColor="@color/colorPrimaryDark"
-        ltv:labelLines="1"
-        ltv:valueGravity="center_horizontal"
-        ltv:valueBackgroundColor="@color/colorAccent"
-        ltv:valueWidth="wrap_content"
-        
-        ltv:labelWeight="1"
-        ltv:valueWeight="5"
-        
-        ltv:labelText="Label Here"
-        ltv:valueText="Value Here"    />
+        app:orientation="horizontal"
+        app:labelGravity="center"
+        app:labelBackgroundColor="@color/colorPrimaryDark"
+        app:labelLines="1"
+        app:valueGravity="center_horizontal"
+        app:valueBackgroundColor="@color/colorAccent"
+        app:labelWeight="1"
+        app:valueWeight="5"
+        app:labelText="Label Here"
+        app:valueText="Value Here"    />
 </LinearLayout>
 
 or in java code:
