@@ -24,12 +24,18 @@ Simple customview to display key-value information on android
 		    <url>https://jitpack.io</url>
 		</repository>
 	</repositories>
+	
 **Step 2.** Add the dependency
 >gradle
+
 	dependencies {
+	
 	        implementation 'com.github.tabebqena:LabelledTextView:1.0.0'
+	
 	}
->maven
+
+> maven
+
  	 <dependency>
 	    <groupId>com.github.tabebqena</groupId>
 	    <artifactId>LabelledTextView</artifactId>
@@ -39,7 +45,7 @@ Simple customview to display key-value information on android
 
 ** How to use **
 
- > It is simple!  
+It is simple!  
 
 in xml
 
