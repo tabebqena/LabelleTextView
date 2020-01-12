@@ -82,6 +82,8 @@ or in java code:
     labelWidth
     labelHeight
     labelWeight
+    labelLayoutHeight
+    labelLayoutWeight
     valueWeight
     labelTextAllCaps
     labelTextColor
@@ -99,6 +101,8 @@ or in java code:
     valueGravity
     valueWidth
     valueHeight
+    valueLayoutWidth
+    valueLayoutHeight
     valueTextAllCaps
     valueTextColor
     valueTextIsSelectable
