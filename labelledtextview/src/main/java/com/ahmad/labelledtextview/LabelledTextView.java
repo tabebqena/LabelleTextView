@@ -39,18 +39,32 @@ public class LabelledTextView extends LinearLayout {
             setLabelGravity(a.getInt(R.styleable.LabelledTextView_labelGravity,
                     Gravity.NO_GRAVITY));
         }
-        if (a.hasValue(R.styleable.LabelledTextView_labelWidth)) {
-            setLabelWidth(a.getDimension(R.styleable.LabelledTextView_labelWidth,
-                     LinearLayout.LayoutParams.WRAP_CONTENT));
-        }else{
-            setLabelWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
+
+        float labelWidth = a.getDimension(R.styleable.LabelledTextView_labelWidth,
+                -3);
+        float labelHeight = a.getDimension(R.styleable.LabelledTextView_labelHeight,
+                -3);
+        float labelLayoutWidth = a.getInt(R.styleable.LabelledTextView_labelLayoutWidth,
+                -3);
+        float labelLayoutHeight = a.getInt(R.styleable.LabelledTextView_labelLayoutHeight,
+                -3);
+
+        if (labelWidth != -3){
+            setLabelWidth(labelWidth);
         }
-        if (a.hasValue(R.styleable.LabelledTextView_labelHeight)) {
-            setLabelHeight(a.getDimension(R.styleable.LabelledTextView_labelHeight,
-                    LinearLayout.LayoutParams.WRAP_CONTENT));
-        }else{
-            setLabelHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
+        if (labelHeight != -3){
+            setLabelHeight(labelHeight);
         }
+
+        if (labelLayoutHeight != -3){
+            setLabelHeight(labelLayoutHeight);
+        }
+
+        if (labelLayoutWidth != -3 ){
+            setLabelWidth(labelLayoutWidth);
+        }
+
+
 
         if (a.hasValue(R.styleable.LabelledTextView_labelWeight)){
             setLabelWeight(a.getInt(R.styleable.LabelledTextView_labelWeight, 1));
@@ -101,6 +115,9 @@ public class LabelledTextView extends LinearLayout {
         }
         setValueGravity(a.getInt(R.styleable.LabelledTextView_valueGravity,
                 Gravity.NO_GRAVITY));
+
+
+
         if (a.hasValue(R.styleable.LabelledTextView_valueWidth)) {
             setValueWidth(a.getDimension(R.styleable.LabelledTextView_valueWidth,
                     LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -113,6 +130,31 @@ public class LabelledTextView extends LinearLayout {
         }else{
             setValueWidth(LinearLayout.LayoutParams.WRAP_CONTENT);
         }
+
+        float valueWidth = a.getDimension(R.styleable.LabelledTextView_valueWidth,
+                -3);
+        float valueHeight = a.getDimension(R.styleable.LabelledTextView_valueHeight,
+                -3);
+        float valueLayoutWidth = a.getInt(R.styleable.LabelledTextView_valueLayoutWidth,
+                -3);
+        float valueLayoutHeight = a.getInt(R.styleable.LabelledTextView_valueLayoutHeight,
+                -3);
+
+        if (valueWidth != -3){
+            setValueWidth(valueWidth);
+        }
+        if (valueHeight != -3){
+            setValueHeight(valueHeight);
+        }
+
+        if (valueLayoutHeight != -3){
+            setValueHeight(valueLayoutHeight);
+        }
+
+        if (valueLayoutWidth != -3 ){
+            setValueWidth(valueLayoutWidth);
+        }
+
         if (a.hasValue(R.styleable.LabelledTextView_valueWeight)){
             setValueWeight(a.getInt(R.styleable.LabelledTextView_valueWeight, 1));
         }else{
@@ -156,9 +198,20 @@ public class LabelledTextView extends LinearLayout {
         if (a.hasValue(R.styleable.LabelledTextView_valueMaxLength)) {
             setValueMaxLength(a.getInt(R.styleable.LabelledTextView_valueMaxLength, -1));
         }
+
+        /*int valueInputType = a.getInt(R.styleable.LabelledTextView_valueInputType, -1);
+        if ( valueInputType != -1) {
+            setValueInputType(valueInputType);
+        }*/
+
+
         a.recycle();
         setOrientation(orientation);
         setGravity(Gravity.CENTER_HORIZONTAL);
+    }
+
+    private void setValueInputType(int valueInputType) {
+        valueView.setInputType(valueInputType);
     }
 
     public void setValueText(String valueText) {

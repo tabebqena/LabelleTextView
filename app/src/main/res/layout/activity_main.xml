@@ -20,7 +20,7 @@
 
         ltv:labelWeight="1"
         ltv:valueWeight="5"
-
+        ltv:valueInputType="phone"
         ltv:labelText="Label Here"
         ltv:valueText="Value Here"    />
 </LinearLayout>
