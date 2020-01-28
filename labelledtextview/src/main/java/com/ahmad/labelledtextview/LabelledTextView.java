@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 
 public class LabelledTextView extends LinearLayout {
+    LinearLayout linearLayout;
     private TextView valueView;
     private TextView labelView;
     private int orientation = LinearLayout.HORIZONTAL;
@@ -29,9 +30,6 @@ public class LabelledTextView extends LinearLayout {
         inflater.inflate(R.layout.labelled_text_view, this, true);
         labelView = findViewById(R.id.labelledTextViewLabel);
         valueView =  findViewById(R.id.labelledTextViewValue);
-
-        setOrientation(a.getInt(R.styleable.LabelledTextView_orientation, orientation));
-
         if (a.hasValue(R.styleable.LabelledTextView_labelText)) {
             setLabelText(a.getString(R.styleable.LabelledTextView_labelText));
         }
@@ -48,30 +46,23 @@ public class LabelledTextView extends LinearLayout {
                 -3);
         float labelLayoutHeight = a.getInt(R.styleable.LabelledTextView_labelLayoutHeight,
                 -3);
-
+        if (labelLayoutHeight != -3){
+            setLabelHeight(labelLayoutHeight);
+        }
+        if (labelLayoutWidth != -3 ){
+            setLabelWidth(labelLayoutWidth);
+        }
         if (labelWidth != -3){
             setLabelWidth(labelWidth);
         }
         if (labelHeight != -3){
             setLabelHeight(labelHeight);
         }
-
-        if (labelLayoutHeight != -3){
-            setLabelHeight(labelLayoutHeight);
-        }
-
-        if (labelLayoutWidth != -3 ){
-            setLabelWidth(labelLayoutWidth);
-        }
-
-
-
         if (a.hasValue(R.styleable.LabelledTextView_labelWeight)){
             setLabelWeight(a.getInt(R.styleable.LabelledTextView_labelWeight, 1));
         }else{
             setLabelWeight(a.getInt(R.styleable.LabelledTextView_labelWeight, 1));
         }
-
         if (a.hasValue(R.styleable.LabelledTextView_labelTextAllCaps)) {
             setLabelTextAllCaps(a.getBoolean(R.styleable.LabelledTextView_labelTextAllCaps, false));
         }
@@ -115,9 +106,6 @@ public class LabelledTextView extends LinearLayout {
         }
         setValueGravity(a.getInt(R.styleable.LabelledTextView_valueGravity,
                 Gravity.NO_GRAVITY));
-
-
-
         if (a.hasValue(R.styleable.LabelledTextView_valueWidth)) {
             setValueWidth(a.getDimension(R.styleable.LabelledTextView_valueWidth,
                     LinearLayout.LayoutParams.WRAP_CONTENT));
@@ -139,14 +127,6 @@ public class LabelledTextView extends LinearLayout {
                 -3);
         float valueLayoutHeight = a.getInt(R.styleable.LabelledTextView_valueLayoutHeight,
                 -3);
-
-        if (valueWidth != -3){
-            setValueWidth(valueWidth);
-        }
-        if (valueHeight != -3){
-            setValueHeight(valueHeight);
-        }
-
         if (valueLayoutHeight != -3){
             setValueHeight(valueLayoutHeight);
         }
@@ -155,6 +135,12 @@ public class LabelledTextView extends LinearLayout {
             setValueWidth(valueLayoutWidth);
         }
 
+        if (valueWidth != -3){
+            setValueWidth(valueWidth);
+        }
+        if (valueHeight != -3){
+            setValueHeight(valueHeight);
+        }
         if (a.hasValue(R.styleable.LabelledTextView_valueWeight)){
             setValueWeight(a.getInt(R.styleable.LabelledTextView_valueWeight, 1));
         }else{
@@ -198,15 +184,13 @@ public class LabelledTextView extends LinearLayout {
         if (a.hasValue(R.styleable.LabelledTextView_valueMaxLength)) {
             setValueMaxLength(a.getInt(R.styleable.LabelledTextView_valueMaxLength, -1));
         }
-
-        /*int valueInputType = a.getInt(R.styleable.LabelledTextView_valueInputType, -1);
-        if ( valueInputType != -1) {
-            setValueInputType(valueInputType);
-        }*/
-
-
-        a.recycle();
         setOrientation(orientation);
+        if (a.hasValue(R.styleable.LabelledTextView_orientation)) {
+            setOrientation(a.getInt(R.styleable.LabelledTextView_orientation, orientation));
+        }else{
+            setOrientation(orientation);
+        }
+        a.recycle();
         setGravity(Gravity.CENTER_HORIZONTAL);
     }
 
@@ -239,7 +223,6 @@ public class LabelledTextView extends LinearLayout {
     public void setOrientation(int orientation) {
         this.orientation = orientation;
         super.setOrientation(orientation);
-        ((LinearLayout)findViewById(R.id.labelledTextViewLayout)).setOrientation(orientation);
     }
 
     @Override

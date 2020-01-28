@@ -16,9 +16,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final LabelledTextView labelledTextView =findViewById(R.id.view1);
-        labelledTextView.setOrientation(LinearLayout.HORIZONTAL);
-        labelledTextView.setLabelText("Label here");
-        labelledTextView.setValueText("Value Here");
+        //labelledTextView.setOrientation(LinearLayout.HORIZONTAL);
+        //labelledTextView.setLabelText("Label here");
+        //labelledTextView.setValueText("Value Here");
         // etc
 
     }
