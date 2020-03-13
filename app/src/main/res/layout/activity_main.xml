@@ -6,59 +6,44 @@
     android:divider="?android:attr/listDivider"
     android:orientation="vertical"
     android:showDividers="middle">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/parent"
+        android:layout_weight="1"
+        >
+
+    </LinearLayout>
+
     <com.ahmad.labelledtextview.LabelledTextView
-        android:id="@+id/view1"
+        android:layout_gravity="center_horizontal"
+        ltv:labelLayoutWidth="wrap_content"
+        ltv:valueLayoutWidth="wrap_content"
+        ltv:labelLayoutHeight="match_parent"
+        ltv:valueLayoutHeight="match_parent"
+        ltv:labelBackgroundColor="@color/colorPrimary"
+        ltv:labelText="Labelllll"
+        ltv:valueText="fkflkofkoe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        ltv:orientation="vertical"
-        ltv:labelGravity="center"
-        ltv:labelBackgroundColor="@color/colorPrimaryDark"
-        ltv:valueGravity="center_horizontal"
-        ltv:valueBackgroundColor="@color/colorAccent"
-        ltv:labelText="Label Here"
-        ltv:valueText="Value Here"    />
-    <com.ahmad.labelledtextview.LabelledTextView
-        android:id="@+id/view2"
+
+        >
+
+    </com.ahmad.labelledtextview.LabelledTextView>
+
+
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        ltv:orientation="vertical"
-        ltv:labelGravity="center"
-        ltv:labelBackgroundColor="@color/colorPrimaryDark"
-        ltv:valueGravity="center_horizontal"
-        ltv:valueBackgroundColor="@color/colorAccent"
-        ltv:labelText="Label Here"
-        ltv:valueText="Value Here"    />
-    <com.ahmad.labelledtextview.LabelledTextView
-        android:id="@+id/view3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        ltv:orientation="vertical"
-        ltv:labelGravity="center"
-        ltv:labelBackgroundColor="@color/colorPrimaryDark"
-        ltv:valueGravity="center_horizontal"
-        ltv:valueBackgroundColor="@color/colorAccent"
-        ltv:labelText="Label Here"
-        ltv:valueText="Value Here"    />
-    <com.ahmad.labelledtextview.LabelledTextView
-        android:id="@+id/view4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        ltv:orientation="vertical"
-        ltv:labelGravity="center"
-        ltv:labelBackgroundColor="@color/colorPrimaryDark"
-        ltv:valueGravity="center_horizontal"
-        ltv:valueBackgroundColor="@color/colorAccent"
-        ltv:labelText="Label Here"
-        ltv:valueText="Value Here"    />
-    <com.ahmad.labelledtextview.LabelledTextView
-        android:id="@+id/view5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        ltv:orientation="vertical"
-        ltv:labelGravity="center"
-        ltv:labelBackgroundColor="@color/colorPrimaryDark"
-        ltv:valueGravity="center_horizontal"
-        ltv:valueBackgroundColor="@color/colorAccent"
-        ltv:labelText="Label Here"
-        ltv:valueText="Value Here"    />
+        android:id="@+id/add"
+        android:text="ADD"
+        android:gravity="center_horizontal"
+        android:layout_margin="20dp"
+        android:padding="20dp">
+
+    </TextView>
+
+
+
 </LinearLayout>
