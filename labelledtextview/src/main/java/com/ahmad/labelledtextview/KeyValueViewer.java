@@ -66,6 +66,23 @@ public class KeyValueViewer {
         }
 
 
+        if (attributes.getMinLabelWidth() != 0){
+            view.setMinLabelWidth(attributes.getMinLabelWidth());
+        }
+
+        if (attributes.getMinLabelHeight() != 0){
+            view.setMinLabelHeight(attributes.getMinLabelHeight());
+        }
+
+        if (attributes.getMinValueWidth() != 0){
+            view.setMinValueWidth(attributes.getMinValueWidth());
+        }
+
+
+        if (attributes.getMinValueHeight() != 0){
+            view.setMinValueHeight(attributes.getMinValueHeight());
+        }
+
 
         view.setLabelGravity(attributes.getLabelGravity());
 

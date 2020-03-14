@@ -34,6 +34,10 @@
         </attr>
         <attr name="labelMaxHeight" format="dimension|reference">
         </attr>
+        <attr name="labelMinWidth" format="dimension|reference" >
+        </attr>
+        <attr name="labelMinHeight" format="dimension|reference">
+        </attr>
 
         <attr name="labelLayoutWidth" format="integer" >
             <enum name="match_parent" value="-1" />
@@ -87,6 +91,10 @@
         <attr name="valueMaxWidth" format="dimension" >
         </attr>
         <attr name="valueMaxHeight" format="dimension">
+        </attr>
+        <attr name="valueMinWidth" format="dimension" >
+        </attr>
+        <attr name="valueMinHeight" format="dimension">
         </attr>
 
         <attr name="valueLayoutWidth" format="integer" >

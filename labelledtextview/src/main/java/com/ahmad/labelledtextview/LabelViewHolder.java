@@ -180,6 +180,15 @@ class LabelViewHolder {
     public void setMaxLabelHeight(int maxHeight) {
         labelView.setMaxHeight(maxHeight);
     }
+    
+    public void setMinLabelWidth(int maxWidth) {
+        labelView.setMinWidth(maxWidth);
+    }
+
+
+    public void setMinLabelHeight(int maxHeight) {
+        labelView.setMinHeight(maxHeight);
+    }
 
     public void setLabelWeight(int weight) {
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) labelView.getLayoutParams();

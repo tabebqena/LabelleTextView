@@ -149,6 +149,26 @@ public class LabelledTextView extends LinearLayout {
         valueViewHolder.setMaxValueHeight(valueMaxHeight);
     }
 
+
+    public void setMinLabelWidth(int maxWidth) {
+        labelViewHolder.setMinLabelWidth(maxWidth);
+    }
+
+
+    public void setMinLabelHeight(int maxHeight) {
+        labelViewHolder.setMinLabelHeight(maxHeight);
+    }
+
+
+    public void setMinValueWidth(int valueMinWidth) {
+        valueViewHolder.setMinValueWidth(valueMinWidth);
+    }
+
+
+    public void setMinValueHeight(int valueMinHeight) {
+        valueViewHolder.setMinValueHeight(valueMinHeight);
+    }
+
     public void setLabelWeight(int weight) {
         labelViewHolder.setLabelWeight(weight);
     }

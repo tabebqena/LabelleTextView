@@ -19,10 +19,13 @@ public class Attributes {
 
     int maxLabelWidth =0;
     int maxLabelHeight =0;
-
     int maxValueWidth =0;
     int maxValueHeight =0;
 
+    int minLabelWidth =0;
+    int minLabelHeight =0;
+    int minValueWidth =0;
+    int minValueHeight =0;
 
     // wrap =-2
     // match = -1
@@ -275,6 +278,23 @@ public class Attributes {
         this.maxLabelHeight = maxLabelHeight;
     }
 
+
+    public int getMinLabelWidth() {
+        return minLabelWidth;
+    }
+
+    public void setMinLabelWidth(int minLabelWidth) {
+        this.minLabelWidth = minLabelWidth;
+    }
+
+    public int getMinLabelHeight() {
+        return minLabelHeight;
+    }
+
+    public void setMinLabelHeight(int minLabelHeight) {
+        this.minLabelHeight = minLabelHeight;
+    }
+    
     public int getMaxValueWidth() {
         return maxValueWidth;
     }
@@ -290,6 +310,23 @@ public class Attributes {
     public void setMaxValueHeight(int maxValueHeight) {
         this.maxValueHeight = maxValueHeight;
     }
+
+    public int getMinValueWidth() {
+        return minValueWidth;
+    }
+
+    public void setMinValueWidth(int minValueWidth) {
+        this.minValueWidth = minValueWidth;
+    }
+
+    public int getMinValueHeight() {
+        return minValueHeight;
+    }
+
+    public void setMinValueHeight(int minValueHeight) {
+        this.minValueHeight = minValueHeight;
+    }
+
 
     public int getValueLayoutWidth() {
         return valueLayoutWidth;

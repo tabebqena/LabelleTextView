@@ -209,6 +209,18 @@ class ValueViewHolder {
         valueEditText.setMaxHeight(valueMaxHeight);
     }
 
+
+    public void setMinValueWidth(int valueMinWidth) {
+        valueView.setMinWidth(valueMinWidth);
+        valueEditText.setMinWidth(valueMinWidth);
+    }
+
+
+    public void setMinValueHeight(int valueMinHeight) {
+        valueView.setMinHeight(valueMinHeight);
+        valueEditText.setMinHeight(valueMinHeight);
+    }
+    
     public void setValueWeight(int weight) {
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) valueView.getLayoutParams();
         params.weight = weight;
