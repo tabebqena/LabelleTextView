@@ -17,6 +17,13 @@ public class Attributes {
     float labelWidth;
     float labelHeight;
 
+    int maxLabelWidth =0;
+    int maxLabelHeight =0;
+
+    int maxValueWidth =0;
+    int maxValueHeight =0;
+
+
     // wrap =-2
     // match = -1
     int labelLayoutWidth = LinearLayout.LayoutParams.WRAP_CONTENT;
@@ -250,6 +257,38 @@ public class Attributes {
 
     public void setValueHeight(float valueHeight) {
         this.valueHeight = valueHeight;
+    }
+
+    public int getMaxLabelWidth() {
+        return maxLabelWidth;
+    }
+
+    public void setMaxLabelWidth(int maxLabelWidth) {
+        this.maxLabelWidth = maxLabelWidth;
+    }
+
+    public int getMaxLabelHeight() {
+        return maxLabelHeight;
+    }
+
+    public void setMaxLabelHeight(int maxLabelHeight) {
+        this.maxLabelHeight = maxLabelHeight;
+    }
+
+    public int getMaxValueWidth() {
+        return maxValueWidth;
+    }
+
+    public void setMaxValueWidth(int maxValueWidth) {
+        this.maxValueWidth = maxValueWidth;
+    }
+
+    public int getMaxValueHeight() {
+        return maxValueHeight;
+    }
+
+    public void setMaxValueHeight(int maxValueHeight) {
+        this.maxValueHeight = maxValueHeight;
     }
 
     public int getValueLayoutWidth() {

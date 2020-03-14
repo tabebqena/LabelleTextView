@@ -10,10 +10,14 @@ import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textview.MaterialTextView;
+
 class ValueViewHolder {
     private final LabelledTextView labelledTextView;
-    private TextView valueView;
-    private EditText valueEditText;
+    private boolean valueEnabled = true;
+    private MaterialTextView valueView;
+    private TextInputEditText valueEditText;
 
     public ValueViewHolder(LabelledTextView labelledTextView, Context context, TypedArray a) {
         this.labelledTextView = labelledTextView;
@@ -47,6 +51,12 @@ class ValueViewHolder {
                 -3);
         float valueHeight = a.getDimension(R.styleable.LabelledTextView_valueHeight,
                 -3);
+
+        int valueMaxWidth = a.getInt(R.styleable.LabelledTextView_valueMaxWidth,
+                0);
+        int valueMaxHeight = a.getInt(R.styleable.LabelledTextView_valueMaxHeight,
+                0);
+
         float valueLayoutWidth = a.getInt(R.styleable.LabelledTextView_valueLayoutWidth,
                 -3);
         float valueLayoutHeight = a.getInt(R.styleable.LabelledTextView_valueLayoutHeight,
@@ -65,6 +75,15 @@ class ValueViewHolder {
         if (valueHeight != -3){
             setValueHeight(valueHeight);
         }
+
+        if (valueMaxWidth != 0){
+            setMaxValueWidth(valueMaxWidth);
+        }
+        if (valueMaxHeight != 0){
+            setMaxValueHeight(valueMaxHeight);
+        }
+
+
         if (a.hasValue(R.styleable.LabelledTextView_valueWeight)){
             setValueWeight(a.getInt(R.styleable.LabelledTextView_valueWeight, 1));
         }else{
@@ -90,7 +109,8 @@ class ValueViewHolder {
                     context.getResources().getColor(android.R.color.background_light)));
         }
         if (a.hasValue(R.styleable.LabelledTextView_valueEnabled)) {
-            setValueEnabled(a.getBoolean(R.styleable.LabelledTextView_valueEnabled, true));
+            valueEnabled = a.getBoolean(R.styleable.LabelledTextView_valueEnabled, true);
+            setValueEnabled(valueEnabled);
         }
         if (a.hasValue(R.styleable.LabelledTextView_valueAlpha)) {
             setValueAlpha(a.getFloat(R.styleable.LabelledTextView_valueAlpha, 1));
@@ -127,11 +147,15 @@ class ValueViewHolder {
 
     void setValueEditable(boolean aBoolean) {
         if (aBoolean){
+            setValueEnabled(true);
+
             valueEditText.setVisibility(View.VISIBLE);
             valueView.setVisibility(View.GONE);
         }else{
             valueEditText.setVisibility(View.GONE);
             valueView.setVisibility(View.VISIBLE);
+
+            setValueEnabled(valueEnabled);
         }
     }
 
@@ -157,9 +181,9 @@ class ValueViewHolder {
         params.height = (int) valueHeight;
         valueView.setLayoutParams(params);
 
-        LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) valueEditText.getLayoutParams();
-        params2.height = (int) valueHeight;
-        valueEditText.setLayoutParams(params2);
+        //LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) valueEditText.getLayoutParams();
+        //params2.height = (int) valueHeight;
+        valueEditText.setLayoutParams(params);
     }
 
     public void setValueWidth(float valueWidth) {
@@ -167,9 +191,22 @@ class ValueViewHolder {
         params.width = (int) valueWidth;
         valueView.setLayoutParams(params);
 
-        LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) valueEditText.getLayoutParams();
-        params.width = (int) valueWidth;
-        valueEditText.setLayoutParams(params2);
+        //LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) valueEditText.getLayoutParams();
+        //params.width = (int) valueWidth;
+        valueEditText.setLayoutParams(params);
+    }
+
+
+
+    public void setMaxValueWidth(int valueMaxWidth) {
+        valueView.setMaxWidth(valueMaxWidth);
+        valueEditText.setMaxWidth(valueMaxWidth);
+    }
+
+
+    public void setMaxValueHeight(int valueMaxHeight) {
+        valueView.setMaxHeight(valueMaxHeight);
+        valueEditText.setMaxHeight(valueMaxHeight);
     }
 
     public void setValueWeight(int weight) {
@@ -177,9 +214,9 @@ class ValueViewHolder {
         params.weight = weight;
         valueView.setLayoutParams(params);
 
-        LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) valueEditText.getLayoutParams();
-        params.weight = weight;
-        valueEditText.setLayoutParams(params2);
+        //LinearLayout.LayoutParams params2 = (LinearLayout.LayoutParams) valueEditText.getLayoutParams();
+        //params.weight = weight;
+        valueEditText.setLayoutParams(params);
     }
 
 

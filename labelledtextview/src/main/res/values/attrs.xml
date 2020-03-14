@@ -30,6 +30,10 @@
         </attr>
         <attr name="labelHeight" format="dimension|reference">
         </attr>
+        <attr name="labelMaxWidth" format="dimension|reference" >
+        </attr>
+        <attr name="labelMaxHeight" format="dimension|reference">
+        </attr>
 
         <attr name="labelLayoutWidth" format="integer" >
             <enum name="match_parent" value="-1" />
@@ -44,6 +48,7 @@
 
         <attr name="labelWeight"  format="integer" />
         <attr name="valueWeight"  format="integer" />
+
 
 
         <attr name="labelTextAllCaps" format="boolean" />
@@ -78,6 +83,10 @@
         <attr name="valueWidth" format="dimension" >
         </attr>
         <attr name="valueHeight" format="dimension">
+        </attr>
+        <attr name="valueMaxWidth" format="dimension" >
+        </attr>
+        <attr name="valueMaxHeight" format="dimension">
         </attr>
 
         <attr name="valueLayoutWidth" format="integer" >

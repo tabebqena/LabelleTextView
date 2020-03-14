@@ -48,6 +48,25 @@ public class KeyValueViewer {
             view.setLabelWeight(attributes.getLabelWeight());
         }
 
+        if (attributes.getMaxLabelWidth() != 0){
+            view.setMaxLabelWidth(attributes.getMaxLabelWidth());
+        }
+
+        if (attributes.getMaxLabelHeight() != 0){
+            view.setMaxLabelHeight(attributes.getMaxLabelHeight());
+        }
+
+        if (attributes.getMaxValueWidth() != 0){
+            view.setMaxValueWidth(attributes.getMaxValueWidth());
+        }
+
+
+        if (attributes.getMaxValueHeight() != 0){
+            view.setMaxValueHeight(attributes.getMaxValueHeight());
+        }
+
+
+
         view.setLabelGravity(attributes.getLabelGravity());
 
         view.setLabelMaxLines(attributes.getLabelMaxLines());

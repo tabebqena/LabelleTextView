@@ -6,10 +6,12 @@ import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.google.android.material.textview.MaterialTextView;
+
 class LabelViewHolder {
 
     private final LabelledTextView labelledTextView;
-    private TextView labelView;
+    private MaterialTextView labelView;
 
     public LabelViewHolder(LabelledTextView labelledTextView, Context context, TypedArray a) {
         this.labelledTextView = labelledTextView;
@@ -32,6 +34,13 @@ class LabelViewHolder {
                 -3);
         float labelLayoutHeight = a.getInt(R.styleable.LabelledTextView_labelLayoutHeight,
                 -3);
+
+
+
+        int labelMaxWidth = a.getInt(R.styleable.LabelledTextView_labelMaxWidth,
+                0);
+        int labelMaxHeight = a.getInt(R.styleable.LabelledTextView_labelMaxHeight,
+                0);
         if (labelLayoutHeight != -3){
             setLabelHeight(labelLayoutHeight);
         }
@@ -44,6 +53,16 @@ class LabelViewHolder {
         if (labelHeight != -3){
             setLabelHeight(labelHeight);
         }
+
+
+
+        if (labelMaxWidth != 0){
+            setMaxLabelWidth(labelMaxWidth);
+        }
+        if (labelMaxHeight != 0){
+            setMaxLabelHeight(labelMaxHeight);
+        }
+
         if (a.hasValue(R.styleable.LabelledTextView_labelWeight)){
             setLabelWeight(a.getInt(R.styleable.LabelledTextView_labelWeight, 1));
         }else{
@@ -150,6 +169,16 @@ class LabelViewHolder {
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) labelView.getLayoutParams();
         params.width = (int) labelWidth;
         labelView.setLayoutParams(params);
+    }
+
+
+    public void setMaxLabelWidth(int maxWidth) {
+        labelView.setMaxWidth(maxWidth);
+    }
+
+
+    public void setMaxLabelHeight(int maxHeight) {
+        labelView.setMaxHeight(maxHeight);
     }
 
     public void setLabelWeight(int weight) {

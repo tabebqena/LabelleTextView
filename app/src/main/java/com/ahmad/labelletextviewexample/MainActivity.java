@@ -31,7 +31,12 @@ public class MainActivity extends AppCompatActivity {
         attributes.setOrientation(LinearLayout.HORIZONTAL);
         attributes.setLabelTextColor(android.R.color.white);
         attributes.setLabelBackgroundColor(android.R.color.black);
+        attributes.setValueEditable(true);
+        attributes.setValueEnabled(true);
 
+
+        attributes.setMaxLabelWidth(200);
+        attributes.setMaxValueWidth(50);
 
         ArrayList<KVModel> data = new ArrayList<>();
 
